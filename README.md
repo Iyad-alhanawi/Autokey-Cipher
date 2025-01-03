@@ -1,5 +1,4 @@
-# Autokey Cipher Python Implementation
-
+# Autokey Cipher 
 ## Overview
 
 This Python program implements the Autokey cipher, a classical encryption method that uses polyalphabetic substitution to encrypt and decrypt alphabetic text. Users can perform both encryption and decryption operations using a given plaintext or ciphertext along with an initial numeric cipher key.
