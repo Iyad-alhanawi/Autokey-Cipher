@@ -9,3 +9,19 @@ This Python program implements the Autokey cipher, a classical encryption method
 - **Dynamic Key Generation**: The cipher key is generated dynamically based on the plaintext during encryption.
 - **Input Validation**: Robust error handling ensures that the key input is a valid integer between 0 and 25.
 - **User-Friendly Interface**: Simple prompts guide users through the encryption and decryption processes.
+
+## Usage
+### Run the Program
+Execute the script in your Python environment.
+
+### Choose Operation
+- Type `encryption` to encrypt text.
+- Type `decryption` to decrypt text.
+
+### Input
+- For encryption: Enter the plaintext and a key.
+- For decryption: Enter the ciphertext and the same key used for encryption.
+- Enter your key (0-25)
+
+### Output
+The program will display the encrypted or decrypted text.
