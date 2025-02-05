@@ -86,25 +86,27 @@ def get_key_input():
             print("Invalid input. Please enter a number between 0 and 25.")  # Handle non-integer input
 
 def main():
-    """
-    Main function to run the Autokey cipher program: either encryption or decryption.
-    """
-    choice = input("Autokey encryption or decryption? (Type 'encryption' or 'decryption')\n").strip().lower()
-    
-    if choice == "encryption":
-        plain_text = input("Enter your plain text:\n").strip().lower()  # Get plain text input
-        initial_cipher_key = get_key_input()  # Get and validate the key input
-        cipher_text = autokey_encryption(plain_text, initial_cipher_key)  # Encrypt the text
-        print("Encrypted text:", cipher_text)  # Output the encrypted text
+   
+    while True:  # Loop to give the user another chance
+        choice = input("Autokey encryption or decryption? (Type 'encryption' or 'decryption')\n").strip().lower()
         
-    elif choice == "decryption":
-        cipher_text = input("Enter your cipher text:\n").strip().lower()  # Get cipher text input
-        initial_cipher_key = get_key_input()  # Get and validate the key input
-        decrypted_text = autokey_decryption(cipher_text, initial_cipher_key)  # Decrypt the text
-        print("Decrypted text:", decrypted_text)  # Output the decrypted text
-        
-    else:
-        print("Invalid choice. Please type 'encryption' or 'decryption'.")  # Handle invalid options
+        if choice == "encryption":
+            plain_text = input("Enter your plain text:\n").strip().lower()  # Get plain text input
+            initial_cipher_key = get_key_input()  # Get and validate the key input
+            cipher_text = autokey_encryption(plain_text, initial_cipher_key)  # Encrypt the text
+            print("Encrypted text:", cipher_text)  # Output the encrypted text
+            break  # Exit the loop after successful encryption
+            
+        elif choice == "decryption":
+            cipher_text = input("Enter your cipher text:\n").strip().lower()  # Get cipher text input
+            initial_cipher_key = get_key_input()  # Get and validate the key input
+            decrypted_text = autokey_decryption(cipher_text, initial_cipher_key)  # Decrypt the text
+            print("Decrypted text:", decrypted_text)  # Output the decrypted text
+            break  # Exit the loop after successful decryption
+            
+        else:
+            print("Invalid choice. Please type 'encryption' or 'decryption'. Try again.")  # Prompt again
+
 
 if __name__ == "__main__":
     main()  # Execute the main function when the script runs
